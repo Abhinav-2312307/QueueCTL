@@ -127,7 +127,7 @@ queuectl worker stop
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│                     User Terminal                        │
+│                     User Terminal                       │
 │                                                         │
 │  queuectl enqueue '{"id":"j1","command":"echo hi"}'     │
 │  queuectl worker start --count 3                        │
@@ -136,8 +136,8 @@ queuectl worker stop
                          │
                          ▼
 ┌─────────────────────────────────────────────────────────┐
-│                   src/cli.js                             │
-│            (Commander-based CLI Router)                  │
+│                   src/cli.js                            │
+│            (Commander-based CLI Router)                 │
 │                                                         │
 │  • Command parsing and validation                       │
 │  • Spawns detached worker processes                     │
@@ -159,18 +159,18 @@ queuectl worker stop
            └────────────┬────────────┘
                         ▼
 ┌─────────────────────────────────────────────────────────┐
-│                  src/database.js                         │
-│               (Data Access Layer)                        │
+│                  src/database.js                        │
+│               (Data Access Layer)                       │
 │                                                         │
-│  • better-sqlite3 with WAL mode                        │
-│  • Atomic job acquisition (immediate transactions)     │
+│  • better-sqlite3 with WAL mode                         │
+│  • Atomic job acquisition (immediate transactions)      │
 │  • Retry scheduling with exponential backoff            │
 │  • Dead worker detection & orphan job recovery          │
 └────────────────────────┬────────────────────────────────┘
                          ▼
 ┌─────────────────────────────────────────────────────────┐
-│              .queuectl/queuectl.db                       │
-│                 (SQLite - WAL mode)                      │
+│              .queuectl/queuectl.db                      │
+│                 (SQLite - WAL mode)                     │
 │                                                         │
 │  Tables: jobs | workers | config                        │
 └─────────────────────────────────────────────────────────┘
