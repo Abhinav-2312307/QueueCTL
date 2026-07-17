@@ -1,5 +1,7 @@
 # QueueCTL — CLI-Based Background Job Queue System
 
+🎥 **Demo Recording**: [Watch the Working CLI Demo Video on Google Drive](https://drive.google.com/file/d/1zHiQnW3AhW23h4egbsA31oGsxy5jSGoX/view?usp=sharing)
+
 QueueCTL is a production-grade, lightweight, CLI-driven background job queue system written in **Node.js** with persistent storage powered by **SQLite**. It manages background jobs executing shell commands, supports parallel worker processes with strict concurrency control, schedules retries using exponential backoff, isolates failed jobs inside a Dead Letter Queue (DLQ), and performs graceful shutdowns.
 
 ---
